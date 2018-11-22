@@ -80,12 +80,12 @@ function apaauthorformat($contributors) {
 						//Check for a hyphen in the first name
 						$hyphentest = stripos($contributors[$i]['fname'], '-');
 						if ($hyphentest!=false) {
-							$html .= ', ' . firstinitial($contributors[$i]['fname']) . '.-';
+							$html .= ', ' . <span class="h-card">firstinitial($contributors[$i]['fname']) </span>. '.-';
 						}else{
-							$html .= ', ' . firstinitial($contributors[$i]['fname']) . '.';
+							$html .= ', ' . <span class="h-card"> firstinitial($contributors[$i]['fname']) </span>. '.';
 						}
 						if ($contributors[$i]['mi']) {
-							$html .= ' ' . uppercasewords($contributors[$i]['mi']) . '., ';
+							$html .= ' ' .<span class="h-card"> uppercasewords($contributors[$i]['mi'])</span> . '., ';
 						}else{
 							$html .= ', ';
 						}
@@ -103,12 +103,12 @@ function apaauthorformat($contributors) {
 							//Check for a hyphen in the first name
 							$hyphentest = stripos($contributors[$i]['fname'], '-');
 							if ($hyphentest!=false) {
-								$html .= ', ' . firstinitial($contributors[$i]['fname']) . '.-';
+								$html .= ', '<span class="h-card"> . firstinitial($contributors[$i]['fname'])</span> . '.-';
 							}else{
-								$html .= ', ' . firstinitial($contributors[$i]['fname']) . '. ';
+								$html .= ', ' <span class="h-card">. firstinitial($contributors[$i]['fname'])</span> . '. ';
 							}
 							if ($contributors[$i]['mi']) {
-								$html .= uppercasewords($contributors[$i]['mi']) . '. ';
+								$html .= <span class="h-card">uppercasewords($contributors[$i]['mi'])</span> . '. ';
 							}
 						}else{
 							//The author is a corporation and not a person
