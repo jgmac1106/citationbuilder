@@ -449,7 +449,7 @@
 	//Creates a single citation container
 	function citationcontainstart($style) {
 		$html = '<div id="overallcitationholder"><table width="100%"><tr><td align="center">Copy and paste the citation below into your work.</td></tr></table>';
-		$html .= '<div id="citationholder" class="citationholder"> &lt; div class="h-cite"&gt; <span class="styleheading">' . styleconvert($style) . '</span> &lt; /div c&gt;<br />';
+		$html .= '<div id="citationholder" class="citationholder"> &lt;div class="h-cite"&gt; <span class="styleheading">' . styleconvert($style) . '</span> &lt;/divc&gt;<br />';
 		echo $html;
 	}
 	
